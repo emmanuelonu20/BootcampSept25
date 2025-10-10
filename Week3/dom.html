@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="text1" class="text">Hello World</div>
+    <div id="text2">Hello World</div>
+
+    <p class="text">Yet another text</p>
+
+    <img id="image1" src="https://smartcdn.gprod.postmedia.digital/calgaryherald/wp-content/uploads/2018/06/tower-3.jpg" width="250">
+
+    <button type="button" onclick="changeText()">Change Text</button>
+
+    <script>
+        function changeText() {
+            let dom = document.getElementById('text1');
+            dom.innerHTML = "I just got changed.";
+            dom.style.backgroundColor = 'yellow';
+
+
+            let divDoms = document.getElementsByTagName('div');
+            console.log(divDoms.length); //2
+
+            let doms = document.getElementsByClassName('text');
+            console.log(doms.length); //2
+
+            let imageDom = document.getElementById('image1');
+            imageDom.setAttribute('src', 'https://theanndorehouse.com/wp-content/uploads/2024/08/cn-tower-toronto-canada-ontario.webp');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form name="registerForm" onSubmit="validateForm()">
+        <div>
+            <label>Name</label> <br>
+            <input type="text" name="fullName">
+        </div>
+
+        <div>
+            <label>Age</label> <br>
+            <input type="number" name="age" id="age">
+        </div>
+
+        <div>
+            <label>Email</label> <br>
+            <input type="email" name="email">
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            let name = document.forms['registerForm']['fullName'].value;
+            if (name === 'Admin') {
+                alert('Your name cannot be Admin');
+            }
+
+            let age = document.getElementById('age').value;
+            if(age < 18) {
+                alert('You are too young.');
+            }
+        }
+    </script>
+
+</body>
+</html>
