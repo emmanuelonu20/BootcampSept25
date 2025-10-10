@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: #f2f2f2;
+            border: 5px dashed #FF0000;
+            border-radius: 20px;
+            margin-top: 30px;
+            margin-left: 60px;
+            margin: 30px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label>Name</label> <br>
+        <input type="text" name="fullname" placeholder="Enter your name" required> <br><br>
+
+        <label>Drink</label> <br>
+        <input type="radio" name="drink" value="small"> Small Drink <br>
+        <input type="radio" name="drink" value="medium"> Medium Drink <br>
+        <input type="radio" name="drink" value="large"> Large Drink <br><br>
+
+        <label>Sandwich Size</label><br>
+        <select>
+            <option value="s">Small</option>
+            <option value="l">Large</option>
+        </select><br><br>
+
+        <input type="submit" value="Place Order"><br><br>
+        <button type="button" style="padding: 20px">Place Order</button>
+    </form>
+
+
+    <div class="box">ABC</div>
+</body>
+</html>

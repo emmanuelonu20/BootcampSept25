@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: orange;
+        }
+
+        @media screen and (min-width: 400px) {
+            body {
+                background-color: yellow;
+            }
+        }
+
+        @media screen and (min-width: 700px) {
+            body {
+                background-color: purple;
+            }
+        }
+
+        @media screen and (min-width: 1000px) {
+            body {
+                background-color: green;
+            }
+        }
+
+        .some-container{
+            width: 50vw;
+            height: 80vh;
+            margin: 0 auto;
+            background-image: url("calgary.jpg");
+            background-size: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="some-container">
+        <h1>Hello Text</h1>
+    </div>
+    
+</body>
+</html>
