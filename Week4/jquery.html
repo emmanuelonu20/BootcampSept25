@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="text1">Hello everyone</div>
+
+    <button type="button" onclick="showElement(true)">Show</button>
+    <button type="button" onclick="showElement(false)">Hide</button>
+    <button type="button" onclick="slideElement('up')">Slide Up</button>
+    <button type="button" onclick="slideElement('down')">Slide Down</button>
+
+    <script>
+        function showElement(isVisible){
+            if (isVisible === true) {
+                //Show element
+                //$("#text1").show();
+                let dom = document.getElementById("text1");
+                dom.style.display = 'block';
+            } else {
+                //Hide element
+                //$("#text1").hide();
+                document.getElementById("text1").style.display = 'none';
+            }
+        }
+
+        function slideElement(direction){
+            if (direction === 'up') {
+                $("#text1").slideUp(1000);
+            } else {
+                $("#text1").slideDown(1000);
+                //$("#text1").animate({color: 'red'}, 'slow');
+            }
+        }
+    </script>
+</body>
+</html>

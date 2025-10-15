@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <form name="registerForm" onSubmit="validateForm()">
+        <div>
+            <label>Name</label> <br>
+            <input type="text" name="fullName">
+        </div>
+
+        <div>
+            <label>Age</label> <br>
+            <input type="number" name="age" id="age">
+        </div>
+
+        <div>
+            <label>Email</label> <br>
+            <input type="email" name="email">
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            let name = $('input[name=fullName]').val(); // Get element based on name attribute
+            if (name === 'Admin') {
+                alert('Your name cannot be Admin');
+            }
+
+            let age = $('#age').val(); //Get element based on ID
+            if(age < 18) {
+                alert('You are too young.');
+            }
+        }
+    </script>
+
+</body>
+</html>
