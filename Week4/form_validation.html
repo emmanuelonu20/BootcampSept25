@@ -33,11 +33,21 @@
             if (name === 'Admin') {
                 alert('Your name cannot be Admin');
             }
-
+            
             let age = $('#age').val(); //Get element based on ID
             if(age < 18) {
                 alert('You are too young.');
             }
+
+            let n = 20
+            try {
+                //fetch a new n from another website or a DB
+                throw new Error('I just failed');
+            }catch(err) {
+                alert(err.message);
+            }
+
+            //code
         }
     </script>
 
