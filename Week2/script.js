@@ -65,7 +65,7 @@ console.log(sum);
 function add(x, y){
     let res = x + y;
     console.log('Result: ', res);
-    add(34, 22);
+    //return res;
 }
 
 add(34, 12);

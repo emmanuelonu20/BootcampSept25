@@ -19,3 +19,22 @@ let students = [
 ];
 
 console.log(students[1].department); //Music
+console.log(students[2].firstName); //Michael
+
+class Car {
+    make;
+    model;
+    color;
+
+    constructor(make, model, color) {
+        this.make = make;
+        this.model = model;
+        this.color = color;
+    }
+}
+
+let car2 = new Car("Nissan", "Rogue", 'Blue');
+let car3 = new Car("Mazda", 'CX60', 'White');
+
+console.log(car2.model); //Rogue
+console.log(car3.make); //Mazda
