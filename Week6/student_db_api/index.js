@@ -10,6 +10,7 @@ app.use(cors());
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
+//Testing database connection
 db_config.authenticate().then(() => {
     console.log('Database is connected');
 }).catch((err) => {
