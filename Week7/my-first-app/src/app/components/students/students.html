@@ -1,0 +1,17 @@
+<h2>students works!</h2>
+<p>This is my students component</p>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Age</th>
+    </tr>
+
+    <tr *ngFor="let student of student_data">
+        <td>{{ student.name }}</td>
+        <td>{{ student.department }}</td>
+        <td>{{ student.age }}</td>
+    </tr>
+
+</table>

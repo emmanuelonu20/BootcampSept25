@@ -36,7 +36,7 @@ console.log(person1);
 let person2 = new Person("Jennifer Benneth", 12, 'China');
 console.log(person2.getInfo());
 
-class Student extends Person {
+class Student extends Person implements Iperson {
     department: string;
 
     constructor(name: string, age: number, country: string, dept: string){
