@@ -5,16 +5,20 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Students } from './components/students/students';
 import { Teachers } from './components/teachers/teachers';
+import { FormsModule } from '@angular/forms';
+import { Custom } from './directives/custom';
 
 @NgModule({
   declarations: [
     App,
     Students,
-    Teachers
+    Teachers,
+    Custom
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

@@ -2,3 +2,24 @@ h1 {
     color: blue;
     text-decoration: underline;
 }
+
+table {
+    width: 400px;
+}
+
+table, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.blue, .blue-bg {
+    background-color: blue;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.red-bg {
+    background-color: red;
+}
