@@ -1,0 +1,33 @@
+<form [formGroup]="studentForm">
+
+    <p>
+        <label>Name</label> <br>
+        <input type="text" formControlName="name">
+
+        <span *ngIf="nameFormControl.touched && nameFormControl.errors?.['required']">
+            The name field is required.
+        </span>
+
+        <span *ngIf="nameFormControl.dirty && nameFormControl.errors?.['minlength']">
+            The name field must be at least 3 characters.
+        </span>
+
+        <span *ngIf="nameFormControl.dirty && nameFormControl.errors?.['prohibited']">
+            The name field contains an illegal value.
+        </span>
+
+    </p>
+
+    <p>
+        <label>Age</label> <br>
+        <input type="number" formControlName="age">
+    </p>
+
+    <p>
+        <label>Email</label> <br>
+        <input type="email" formControlName="email">
+    </p>
+
+    <button type="button" (click)="onSubmit()" [disabled]="studentForm.invalid">Submit</button>
+
+</form>
