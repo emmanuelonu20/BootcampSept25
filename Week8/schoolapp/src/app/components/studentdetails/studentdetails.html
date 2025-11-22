@@ -1,0 +1,10 @@
+<div *ngIf="student; else studentnotfound">
+    <p>ID: {{ student.id }}</p>
+    <p>Name: {{ student.name }}</p>
+    <p>Department: {{ student.department }}</p>
+    <p>Age: {{ student.age }}</p>
+</div>
+
+<ng-template #studentnotfound>
+    <h2>Student not found</h2>
+</ng-template>
