@@ -1,5 +1,5 @@
 <ul>
-    <li *ngFor="let student of students">
-        <a [routerLink]="['/students', student.id]">{{ student.name }}</a>
+    <li *ngFor="let studentData of students">
+        <app-student [student]="studentData" (deleteStudentEvent)="deleteStudent($event)"></app-student>
     </li>
 </ul>

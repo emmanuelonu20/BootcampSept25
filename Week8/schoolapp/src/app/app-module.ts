@@ -7,6 +7,7 @@ import { Students } from './components/students/students';
 import { Teachers } from './components/teachers/teachers';
 import { Pagenotfound } from './components/pagenotfound/pagenotfound';
 import { Studentdetails } from './components/studentdetails/studentdetails';
+import { Student } from './components/student/student';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { Studentdetails } from './components/studentdetails/studentdetails';
     Students,
     Teachers,
     Pagenotfound,
-    Studentdetails
+    Studentdetails,
+    Student
   ],
   imports: [
     BrowserModule,
