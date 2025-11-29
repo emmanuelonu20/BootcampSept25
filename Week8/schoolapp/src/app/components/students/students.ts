@@ -17,7 +17,10 @@ export class Students implements OnInit {
   }
 
   ngOnInit(): void {
-    this.students = this.studentService.getStudents();
+    //then().catch()
+    this.studentService.getStudents().subscribe(result => {
+      this.students = result;
+    });
   }
 
   deleteStudent(studentId: number) {
@@ -26,6 +29,12 @@ export class Students implements OnInit {
 
     //Remove the student from the array
     this.students.splice(index, 1);
+
+    //Remove student from database
+    this.studentService.deleteStudent(studentId).subscribe(result => {
+      console.log(result);
+      alert(result.name + ' was deleted successfully.');
+    });
   }
 
 }

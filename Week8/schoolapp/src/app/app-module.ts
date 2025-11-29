@@ -8,6 +8,9 @@ import { Teachers } from './components/teachers/teachers';
 import { Pagenotfound } from './components/pagenotfound/pagenotfound';
 import { Studentdetails } from './components/studentdetails/studentdetails';
 import { Student } from './components/student/student';
+import { provideHttpClient } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StudentForm } from './components/student-form/student-form';
 
 @NgModule({
   declarations: [
@@ -16,14 +19,18 @@ import { Student } from './components/student/student';
     Teachers,
     Pagenotfound,
     Studentdetails,
-    Student
+    Student,
+    StudentForm
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
+    provideHttpClient()
   ],
   bootstrap: [App]
 })

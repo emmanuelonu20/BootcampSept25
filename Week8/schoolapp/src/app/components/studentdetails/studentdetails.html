@@ -1,7 +1,7 @@
 <div *ngIf="student; else studentnotfound">
     <p>ID: {{ student.id }}</p>
     <p>Name: {{ student.name }}</p>
-    <p>Department: {{ student.department }}</p>
+    <p>Department: {{ student.department.title }}</p>
     <p>Age: {{ student.age }}</p>
 </div>
 

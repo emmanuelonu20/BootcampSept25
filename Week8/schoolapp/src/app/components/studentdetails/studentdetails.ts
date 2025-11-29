@@ -11,12 +11,14 @@ import { Istudent } from '../../interfaces/istudent';
 })
 export class Studentdetails {
 
-  student: Istudent;
+  student!: Istudent;
 
   constructor(private route: ActivatedRoute, private studentService: StudentService){
     const studentId = parseInt(this.route.snapshot.paramMap.get('student_id')!);
 
-    this.student = this.studentService.getStudent(studentId)!;
+    this.studentService.getStudent(studentId).subscribe(result => {
+      this.student = result;
+    });
   }
 
 }

@@ -5,7 +5,7 @@ const Student = require('./models/student');
 const Department = require('./models/department');
 const cors = require('cors');
 
-app.use(cors());
+app.use(cors()); //allow all frontends or clients to connect
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
